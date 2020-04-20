@@ -100,7 +100,7 @@ trait HandlesActions
                     return app($class->name);
                 }
 
-                return app($parameter->name);
+                throw new \Exception;
             }, function () use (&$params) {
                 return array_shift($params);
             }, false);
